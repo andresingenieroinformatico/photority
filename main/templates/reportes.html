@@ -1,0 +1,32 @@
+{% extends 'inicio.html' %} {% load static %} {% block title %}Mis Reportes -
+Photority{% endblock %} {% block content %}
+<section class="mis-reportes">
+    <h2>Mis Reportes</h2>
+    <p>Aquí puedes ver el listado de tus reportes realizados.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Daño</th>
+                <th>Descripción</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reporte in reportes %}
+            <tr>
+                <td>{{ reporte.tipo_dano }}</td>
+                <td>{{ reporte.descripcion }}</td>
+                <td>{{ reporte.fecha }}</td>
+                <td>{{ reporte.estado }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No tienes reportes registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}

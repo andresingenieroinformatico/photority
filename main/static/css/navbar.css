@@ -1,0 +1,78 @@
+/* Navbar Styling */
+.navbar {
+    background-color: #a0baea;
+    padding: 20px;
+    width: 100%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar__item {
+    font-family: 'Arial', sans-serif;
+}
+.navbar__item1 {
+    font-family: 'Arial', sans-serif;
+    margin-left:200px;
+}
+
+.navbar__link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar__link:hover {
+    background-color: #a5d6a7; /* Light green on hover */
+    color: #1a1a1a; /* Black for contrast */
+}
+
+.navbar__log {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar__log:hover {
+    background-color: #a5d6a7; /* Light green on hover */
+    color: #1a1a1a; /* Black for contrast */
+}
+
+
+
+.navbar__link.active {
+    background-color: #a5d6a7; /* Light green for active link */
+    color: #1a1a1a; /* Black for contrast */
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar__link {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}

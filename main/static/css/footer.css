@@ -1,0 +1,138 @@
+/* Footer Styling */
+.footer {
+    background-color: #1a1a1a; 
+    color: #ffffff; 
+    padding: 40px 20px;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: center; /* Center text in each section */
+}
+
+.footer-title {
+    color: #49994b; /* Deep blue */
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-text {
+    color: #ffffff; /* White */
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center links horizontally */
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #ffffff; /* Light green */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #a5d6a7;
+}
+
+.footer-social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center logos horizontally */
+    align-items: center; /* Align logos vertically */
+    gap: 12px; /* Reduced gap to fit four logos */
+}
+
+.footer-social-links li {
+    margin-bottom: 8px;
+    line-height: 24px; /* Match logo height for vertical alignment */
+}
+
+.footer-social-link {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social-link:hover {
+    opacity: 0.7; /* Subtle fade effect on hover */
+}
+
+.social-logo {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    object-fit: contain; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+}
+
+.social-logo-ig {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+}
+
+.social-logo-ig[src=""], .social-logo-ig:not([src]) {
+    background-color: #a5d6a7; /* Light green fallback */
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+/* Fallback for missing images */
+.social-logo[src=""], .social-logo:not([src]) {
+    background-color: #a5d6a7; /* Light green fallback */
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    text-align: center;
+    border-top: 3px solid #49994b; /* Light green */
+    padding-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-social-links {
+        flex-direction: column; /* Stack logos vertically on mobile */
+        gap: 10px;
+    }
+}

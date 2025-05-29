@@ -1,0 +1,21 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block title %}Quienes Somos- Photority{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/quienes_somos.css' %}">
+<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+{% endblock %}
+
+{% block content %}
+    <main class="main-content">
+        <section class="somos">
+                <h2 class="somos-title">¿qué es Fotority?</h2>
+                <p class="somos-text">Photority es una plataforma desarrollada por estudiantes del Instituto Universitario de la Paz (UNIPAZ) para gestionar reportes de daños físicos y tecnológicos en la institución.</p>
+        
+                <h3 class="somos">Nuestra Misión</h3>
+                <p class="somos-text">Facilitar la identificación, reporte y resolución de daños en la infraestructura y equipos tecnológicos de UNIPAZ, promoviendo un entorno eficiente y seguro para la comunidad académica.</p>
+        </section>
+    </main>
+{% endblock %}

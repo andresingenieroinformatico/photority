@@ -1,0 +1,25 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block title %}Reportar Daño - Photority{% endblock %}
+
+{% block content %}
+<section class="reportar">
+    <h2>Reportar Daño</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <!-- Aquí agregas los campos del formulario -->
+        <label for="tipo_dano">Tipo de Daño:</label>
+        <select id="tipo_dano" name="tipo_dano" required>
+            <option value="">Seleccione...</option>
+            <option value="fisico">Físico</option>
+            <option value="tecnologico">Tecnológico</option>
+        </select>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+        <button type="submit">Enviar Reporte</button>
+    </form>
+</section>
+{% endblock %}

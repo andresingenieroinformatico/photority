@@ -1,0 +1,20 @@
+.somos {
+    background-color: #ffffff; /* White background for intro section */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.somos-title {
+    color: #003087; /* Deep blue for section title */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.somos-text {
+    color: #1a1a1a; /* Black for text */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}

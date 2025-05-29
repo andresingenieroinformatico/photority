@@ -1,0 +1,17 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+<nav class="navbar">
+  <ul class="navbar__list">
+    <li class="navbar__item">
+      <a class="navbar__link {% if request.path == '/' %}active{% endif %}" href="{% url 'inicio' %}">Inicio</a>
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link {% if request.path == '/reportar/' %}active{% endif %}" href="{% url 'reportar' %}">Reportar Daño</a>
+    </li>
+    <li class="navbar__item">
+      <a class="navbar__link {% if request.path == '/reportes/' %}active{% endif %}" href="{% url 'reportes' %}">Mis Reportes</a>
+    </li>
+    </li>
+  </ul>
+</nav>

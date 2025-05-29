@@ -1,0 +1,42 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="footer-title">Photority - UNIPAZ</h3>
+            <ul class="footer-links">
+                <li><a href="{% url 'quienes_somos' %}">Quiénes Somos</a></li>
+                <li><a href="{% url 'politicas_privacidad' %}">Políticas de Privacidad</a></li>
+                <li><a href="{% url 'terminos_condiciones' %}">Términos y Condiciones</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Enlaces Útiles</h3>
+            <ul class="footer-links">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Contacto</h3>
+            <p class="footer-text">Instituto Universitario de la Paz</p>
+            <p class="footer-text">Email: soportephotority@unipaz.edu.co</p>
+            <p class="footer-text">Teléfono: +57 316 579 6846</p>
+        </div>
+        <div class="footer-section">
+            <h3 class="footer-title">Redes Sociales</h3>
+            <ul class="footer-social-links">
+                <li><a href="https://x.com/UNIPAZnoticias" target="_blank" class="footer-social-link"><img src="{% static 'images/logo_x.png' %}" alt="logo red x" class="social-logo"></a></li>
+
+                <li><a href="https://web.facebook.com/profile.php?id=100064522486908&sk=about" target="_blank" class="footer-social-link"><img src="{% static 'images/logo_facebook.png' %}" alt="logo Facebook" class="social-logo"></a></li>
+
+                <li><a href="https://www.instagram.com/unipaznoticias?igsh=MWtrbXN0MGd1YzQ5OA==" target="_blank" class="footer-social-link"><img src="{% static 'images/logo_ig.png' %}" alt="logo Instagram" class="social-logo-ig"></a></li>
+                
+                <li><a href="https://unipaz.edu.co" target="_blank" class="footer-social-link"><img src="{% static 'images/logo.jpg' %}" alt="UNIPAZ" class="social-logo"></a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-text">© 2025 UNIPAZ | Desarrollado por Juan Jose Figueroa y Andres Ferney Garcia</p>
+    </div>
+</footer>

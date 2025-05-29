@@ -1,0 +1,100 @@
+.about {
+    background-color: #ffffff; 
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-title {
+    color: #003087; /* Deep blue */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-text {
+    color: #1a1a1a; /* Black */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.about-section {
+    margin: 5px 0;
+}
+
+.about-subtitle {
+    color: #003087; 
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #f5f5f5; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 2;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-name {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 5 px;
+    font-weight: 600px;
+    font-family: 'Arial', sans-serif;
+    max-width: 200px;
+}
+
+.team-role {
+    color: #0e7212; 
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 20px;
+    }
+
+    .about-title {
+        font-size: 1.8rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        max-width: 100%;
+    }
+}
