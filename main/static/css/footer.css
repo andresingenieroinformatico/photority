@@ -69,7 +69,7 @@
 }
 
 .footer-social-links li {
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     line-height: 24px; /* Match logo height for vertical alignment */
 }
 
@@ -103,6 +103,19 @@
     height: 30px;
     display: block;
 }
+.social-logo-fb {
+    width: 30px;
+    height: 30px;
+    object-fit: contain; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing issues */
+}
+
+.social-logo-fb[src=""], .social-logo-fb:not([src]) {
+    background-color: #a5d6a7; /* Light green fallback */
+    width: 30px;
+    height: 30px;
+    display: block;
+}
 
 /* Fallback for missing images */
 .social-logo[src=""], .social-logo:not([src]) {
@@ -116,7 +129,7 @@
     max-width: 1200px;
     margin: 20px auto 0;
     text-align: center;
-    border-top: 3px solid #49994b; /* Light green */
+    border-top: 2px solid #939393; /* Light green */
     padding-top: 20px;
 }
 
