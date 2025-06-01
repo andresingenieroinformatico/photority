@@ -1,0 +1,58 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block title %}Registrarse - Fotority{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/registro.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap">
+    <script src="https://kit.fontawesome.com/869dc8f5ef.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block content %}
+    <section class="register-section" id="container">
+        <div class="register-container">
+            <div class="register-image">
+                <img src="{% static 'images/images_registro.jpg' %}" alt="Register Illustration" class="register-img">
+            </div>
+            <div class="register-form-container sign-up-container">
+                <form method="post" class="register-form">
+                    {% csrf_token %}
+                    <h1 class="register-title">Crear una Cuenta</h1>
+                    <div class="social-container">
+                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social"><i class="fab fa-google" id="red"></i></a>
+                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>o usa tu email como registro</span>
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" placeholder="Usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirmar Contraseña" required>
+                    </div>
+                    {% if form.errors %}
+                        <p class="error-message">Por favor, corrige los errores en el formulario.</p>
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <p class="error-message">{{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                        {% for error in form.non_field_errors %}
+                            <p class="error-message">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    <button type="submit" class="register-button" id="lila">Registrarse</button>
+                </form>
+                <p class="login-link">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión aquí</a></p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
