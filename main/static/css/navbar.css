@@ -39,6 +39,12 @@
     color: #1a1a1a; /* Black for contrast */
 }
 
+.navbar__link.active {
+    background-color: #a5d6a7; /* Light green for active link */
+    color: #1a1a1a; /* Black for contrast */
+    font-weight: 600;
+}
+
 .navbar__log {
     color: #ffffff;
     text-decoration: none;
@@ -55,13 +61,13 @@
     color: #1a1a1a; /* Black for contrast */
 }
 
-
-
-.navbar__link.active {
+.navbar__log.active {
     background-color: #a5d6a7; /* Light green for active link */
     color: #1a1a1a; /* Black for contrast */
     font-weight: 600;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
