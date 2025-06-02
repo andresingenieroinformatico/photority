@@ -25,7 +25,6 @@
                         <a href="#" class="social"><i class="fab fa-google" id="red"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <span>o usa tu email como registro</span>
                     <div class="form-group">
                         <input type="text" id="username" name="username" placeholder="Usuario" required>
                     </div>
@@ -50,8 +49,9 @@
                         {% endfor %}
                     {% endif %}
                     <button type="submit" class="register-button" id="lila">Registrarse</button>
+                    <p class="login-link">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión aquí</a></p>
                 </form>
-                <p class="login-link">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Inicia sesión aquí</a></p>
+                
             </div>
         </div>
     </section>
