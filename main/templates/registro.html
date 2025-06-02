@@ -20,23 +20,37 @@
                 <form method="post" class="register-form">
                     {% csrf_token %}
                     <h1 class="register-title">Crear una Cuenta</h1>
+
                     <div class="social-container">
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social"><i class="fab fa-google" id="red"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
+
                     <div class="form-group">
-                        <input type="text" id="username" name="username" placeholder="Usuario" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                     </div>
+
+                    <div class="form-group">
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                    </div>
+
                     <div class="form-group">
                         <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
                     </div>
+
+                    <div class="form-group">
+                        <input type="text" id="tipo_user" name="tipo_user" placeholder="Tipo de Usuario" required>
+                    </div>
+
                     <div class="form-group">
                         <input type="password" id="password" name="password" placeholder="Contraseña" required>
                     </div>
+
                     <div class="form-group">
                         <input type="password" id="password_confirm" name="password_confirm" placeholder="Confirmar Contraseña" required>
                     </div>
+
                     {% if form.errors %}
                         <p class="error-message">Por favor, corrige los errores en el formulario.</p>
                         {% for field in form %}
