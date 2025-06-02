@@ -16,15 +16,24 @@
             <div class="login-image">
                 <img src="{% static 'images/images_login.jpg' %}" alt="Login Illustration" class="login-img">
             </div>
+<<<<<<< HEAD
             <div class="login-form-container sign-in-container">
                 <form method="post" class="login-form">
                     {% csrf_token %}
                     <h1 class="login-title">Iniciar Sesión</h1>
+=======
+            <div class="login-section sign-in-container">
+                <form method="post" class="login-form">
+                    {% csrf_token %}
+                    <h1 class="login-title">Iniciar Sesión</h1>
+
+>>>>>>> login
                     <div class="social-container">
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social"><i class="fab fa-google" id="red"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
+<<<<<<< HEAD
                     <span>o usa tu email</span>
                     <div class="form-group">
                         <input type="text" id="username" name="username" placeholder="Usuario" required>
@@ -32,14 +41,38 @@
                     <div class="form-group">
                         <input type="password" id="password" name="password" placeholder="Contraseña" required>
                     </div>
+=======
+
+                    <div class="form-group">
+                        <input type="text" id="tipo_user" name="tipo_user" placeholder="Tipo de Usuario" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="username" name="username" placeholder="Usuario" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
+
+>>>>>>> login
                     {% if form.errors %}
                         <p class="error-message">Usuario o contraseña incorrectos. Por favor, intenta de nuevo.</p>
                     {% endif %}
                     <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
                     <button type="submit" class="login-button">Iniciar Sesión</button>
+<<<<<<< HEAD
                 </form>
                 <p class="register-link">¿No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate aquí</a></p>
             </div>
         </div>
     </section>
 {% endblock %}
+=======
+                    <p class="register-link">¿No tienes una cuenta? <a href="{% url 'registro' %}">Regístrate aquí</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %} 
+>>>>>>> login
