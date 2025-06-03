@@ -2,59 +2,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
 
 .register-section {
-    background: #ffffff; /* White background, consistent with inicio.css */
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); /* Shadow from example */
-    max-width: 768px; /* Matches example container width */
+    background: #ffffff;
     width: 100%;
-    min-height: 480px;
-    margin: 20px auto; /* Center with margin */
-    overflow: hidden; /* Prevent overflow */
-    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 /* Two-Column Container */
 .register-container {
     display: flex;
     flex-direction: row;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
 }
 
 /* Image Column */
 .register-image {
-    flex: 1;
-    max-width: 50%;
-    background: #be4bdb; /* Purple from example sign-up overlay */
+    flex: 0 0 70%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .register-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image fits nicely */
-    border-radius: 10px 0 0 10px; /* Rounded corners on left side */
+    max-height: 100%;
 }
 
 /* Form Column */
 .register-form-container {
-    flex: 1;
-    max-width: 50%;
-    padding: 0 50px;
+    flex: 0 0 30%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Form Styling */
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
+    align-items: center;
 }
 
 /* Register Title */
 .register-title {
-    color: #003087; /* Deep blue from original */
+    color: #4b0082;
     font-size: 2rem;
     font-weight: bold;
-    margin: 0 0 20px;
+    margin-bottom: 20px;
 }
 
 /* Social Container */
@@ -71,8 +84,8 @@
     margin: 0 5px;
     height: 40px;
     width: 40px;
-    color: #1a1a1a; /* Black from original */
-    transition: transform 80ms ease-in;
+    color: #1a1a1a;
+    transition: transform 80ms ease-in-out;
 }
 
 .social-container a:hover {
@@ -80,17 +93,10 @@
 }
 
 #red {
-    color: red; /* From example CSS */
+    color: #db4a39;
 }
 
-/* Form Styling */
-.register-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-}
-
+/* Form Inputs */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -98,46 +104,46 @@
 }
 
 .form-group input {
-    background: #eee; /* Light gray from example */
+    background: #eee;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
-    width: 100%;
+    width: 300px;
     font-size: 1rem;
     border-radius: 5px;
-    color: #1a1a1a; /* Black from original */
+    color: #1a1a1a;
 }
 
 .form-group input:focus {
     outline: none;
-    border: 1px solid #4c85ee; /* Border color from original */
-    box-shadow: 0 0 5px rgba(0, 48, 135, 0.3); /* Shadow from original */
+    border: 1px solid #4b0082;
+    box-shadow: 0 0 5px rgba(75, 0, 130, 0.3);
 }
 
 /* Error Message */
 .error-message {
-    color: #d32f2f; /* Red from original */
+    color: #d32f2f;
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
 /* Register Button */
 .register-button {
-    border-radius: 20px; /* Rounded from example */
-    border: 1px solid #be4bdb; /* Purple from example */
-    background: #be4bdb; /* Purple from example */
-    color: #ffffff; /* White from original */
+    border-radius: 20px;
+    border: 1px solid #4b0082;
+    background: #4b0082;
+    color: #ffffff;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: transform 80ms ease-in, background-color 0.3s ease;
+    transition: transform 80ms ease-in-out, background-color 0.3s ease;
 }
 
 .register-button:hover {
-    background: #a135c6; /* Slightly darker purple for hover */
-    transform: scale(0.95); /* Scale effect from example */
+    background: #3a0066;
+    transform: scale(0.95);
 }
 
 .register-button:focus {
@@ -146,15 +152,15 @@
 
 /* Login Link */
 .login-link {
-    color: #1a1a1a; /* Black from original */
+    color: #1a1a1a;
     font-size: 14px;
     margin-top: 15px;
 }
 
 .login-link a {
-    color: #228be6; /* Link color from example */
+    color: #4b0082;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .login-link a:hover {
@@ -162,40 +168,32 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .register-section {
-        max-width: 90%;
-        min-height: auto;
-        margin: 10px auto;
-    }
-
+@media screen and (max-width: 768px) {
     .register-container {
-        flex-direction: column; /* Stack vertically */
+        flex-direction: column;
     }
-
-    .register-image, .register-form-container {
-        max-width: 100%; /* Full width */
+    .register-image {
+        flex: 0 0 auto;
+        max-height: 40vh;
     }
-
     .register-img {
-        max-height: 200px; /* Limit image height */
-        border-radius: 10px 10px 0 0; /* Adjust for top stacking */
+        border-radius: 10px 10px 0 0;
     }
-
     .register-form-container {
+        flex: 0 0 auto;
+        width: 100%;
         padding: 20px;
+        border-image: none;
+        border: 2px solid #4b0082;
     }
-
     .register-title {
         font-size: 1.8rem;
     }
-
     .form-group input {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
-
     .register-button {
         font-size: 10px;
-        padding: 10px 30px;
+        padding: 10px 20px;
     }
 }

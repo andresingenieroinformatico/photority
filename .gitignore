@@ -1,0 +1,23 @@
+# Ignorar archivos y carpetas de Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+
+# Archivos de entorno virtual
+env/
+venv/
+ENV/
+
+# Archivos de configuración local
+*.env
+*.sqlite3
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de log
+*.log
