@@ -1,6 +1,12 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as auth_login
 from django.contrib import messages
+from django.contrib.auth import get_user_model
+from django.contrib.auth.hashers import check_password
+from django.http import HttpResponse
+
+
+
 
 def inicio(request):
     return render(request, 'inicio.html') 
@@ -26,31 +32,62 @@ def terminos_condiciones(request):
 def about(request):
     return render(request, 'about.html') 
 
+
+
+
+
+User = get_user_model()
+
+from django.contrib.auth import get_user_model
+from django.contrib.auth.hashers import check_password
+from django.contrib.auth import login as auth_login
+from django.contrib import messages
+from django.shortcuts import render, redirect
+
+User = get_user_model()
+
 def login(request):
     if request.method == 'POST':
-        tipo_user = request.POST.get('tipo_user') 
-        cedula = request.POST['cedula']
-        contraseña = request.POST['contraseña']
-        user = authenticate(request, cedula=cedula, contraseña=contraseña, tipo_user=tipo_user)
-        if user is not None:
-            try:
-                profile = user.profile
-                if profile.role in ['Admin', 'Docente', 'Estudiante']: 
-                    login(request, user)
-                    if profile.role == 'Admin':
-                        return redirect('Admin_dashboard')
-                    else:
-                        return redirect('index.html')
+        tipo_user = request.POST.get('tipo_user')  
+        cedula = request.POST.get('cedula')
+        contraseña = request.POST.get('contraseña')
+
+        print("POST recibido:")
+        print("tipo_user:", tipo_user)
+        print("cedula:", cedula)
+        print("contraseña:", contraseña)
+
+        from django.contrib.auth import get_user_model
+        from django.contrib.auth.hashers import check_password
+        from django.contrib.auth import login as auth_login
+        from django.contrib import messages
+
+        User = get_user_model()
+
+        try:
+            user = User.objects.get(username=cedula)  # usamos username
+            print("Usuario encontrado:", user)
+
+            if check_password(contraseña, user.password):
+                print("Contraseña válida")
+
+                if user.role == tipo_user and user.role in ['Docente', 'Estudiante']:
+                    auth_login(request, user)
+                    print("Login exitoso")
+                    return redirect('index')  # Asegúrate de que esta URL exista
                 else:
                     messages.error(request, 'Rol no permitido.')
-                    return render(request, 'login.html')
-            except AttributeError:
-                messages.error(request, 'El usuario no tiene un perfil asignado.')
-                return render(request, 'login.html')
-        else:
-            messages.error(request, 'Correo o contraseña incorrectos.')
-            return render(request, 'login.html')
-    return render(request, 'index.html')
+            else:
+                print("Contraseña inválida")
+                messages.error(request, 'Cédula o contraseña incorrectos.')
+        except User.DoesNotExist:
+            print("Usuario no encontrado")
+            messages.error(request, 'Cédula o contraseña incorrectos.')
+
+    return render(request, 'login.html')
+
+
+
 
 
 def registro(request):
