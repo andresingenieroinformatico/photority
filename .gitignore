@@ -18,6 +18,7 @@ env/
 Thumbs.db
 
 # Archivos de log
-*.log
-#  aimagenes de reportes    
-media/ 
+*.log  
+
+# archivos multimedia subidos por los usuarios
+main/media/
