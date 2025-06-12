@@ -9,19 +9,8 @@ __pycache__/
 # Archivos de entorno virtual
 env/
 
-# Archivos de configuración local
-*.env
-*.sqlite3
-
-# Archivos de sistema
-.DS_Store
-Thumbs.db
-
-# Archivos de log
-*.log  
-
 # archivos multimedia subidos por los usuarios
-main/media/
+*main/media/
 
 #imagenes en las plantillas
-main/static/images/
+*main/static/images/
