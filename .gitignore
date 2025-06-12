@@ -8,8 +8,6 @@ __pycache__/
 
 # Archivos de entorno virtual
 env/
-venv/
-ENV/
 
 # Archivos de configuración local
 *.env
@@ -21,3 +19,5 @@ Thumbs.db
 
 # Archivos de log
 *.log
+#  aimagenes de reportes    
+media/reportes/*
