@@ -1,0 +1,48 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block title %}Términos y Condiciones - Fotority{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/terminos.css' %}">
+<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <section class="terminos-container">
+        <h2 class="terminos-title">Términos y Condiciones de Uso</h2>
+        <p class="intro-text">Bienvenido a Fotority. Al acceder y utilizar esta plataforma, aceptas cumplir con los siguientes términos y condiciones:</p>
+
+        <div class="termino-bloque">
+            <h3>1. Uso de la plataforma</h3>
+            <p>Fotority está destinada exclusivamente a estudiantes, docentes y personal administrativo de UNIPAZ para reportar daños en infraestructura y tecnología. El mal uso del sistema podrá conllevar a restricciones de acceso.</p>
+        </div>
+
+        <div class="termino-bloque">
+            <h3>2. Privacidad y protección de datos</h3>
+            <p>Respetamos la privacidad de nuestros usuarios. Los datos recopilados solo se utilizan para fines académicos, de mejora institucional y no serán compartidos con terceros sin autorización expresa.</p>
+        </div>
+
+        <div class="termino-bloque">
+            <h3>3. Responsabilidad del usuario</h3>
+            <p>El usuario se compromete a proporcionar información veraz y precisa en los reportes. La falsificación de reportes o el uso inadecuado del sistema puede generar sanciones internas.</p>
+        </div>
+
+        <div class="termino-bloque">
+            <h3>4. Propiedad intelectual</h3>
+            <p>El contenido, diseño y código fuente de Fotority son propiedad del equipo desarrollador de UNIPAZ. Está prohibida su reproducción o modificación sin autorización escrita.</p>
+        </div>
+
+        <div class="termino-bloque">
+            <h3>5. Modificaciones</h3>
+            <p>Fotority se reserva el derecho de modificar estos términos en cualquier momento. Se notificará a los usuarios en caso de cambios importantes.</p>
+        </div>
+
+        <div class="termino-bloque">
+            <h3>6. Contacto</h3>
+            <p>Si tienes preguntas sobre estos términos, puedes escribirnos a <a href="mailto:soporte@fotority.com">soporte@fotority.com</a> o visitar la página de <a href="{% url 'contacto' %}">contacto</a>.</p>
+        </div>
+    </section>
+</main>
+{% endblock %}

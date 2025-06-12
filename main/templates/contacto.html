@@ -1,0 +1,42 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block title %}Contacto - Fotority{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/contacto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <section class="contacto-section">
+        <h2 class="contacto-title">Información de Contacto</h2>
+        <p class="contacto-description">Estamos disponibles para resolver cualquier duda relacionada con la plataforma Fotority.</p>
+
+        <div class="contacto-grid">
+            <div class="contacto-card">
+                <i class="fas fa-envelope contacto-icon"></i>
+                <h3>Correo Electrónico</h3>
+                <p>soporte@fotority.com</p>
+                <p>unipaz.fotority@gmail.com</p>
+            </div>
+
+            <div class="contacto-card">
+                <i class="fas fa-phone contacto-icon"></i>
+                <h3>Teléfonos</h3>
+                <p>+57 300 123 4567</p>
+                <p>+57 310 987 6543</p>
+            </div>
+
+            <div class="contacto-card">
+                <i class="fas fa-map-marker-alt contacto-icon"></i>
+                <h3>Ubicación</h3>
+                <p>Instituto Universitario de la Paz - UNIPAZ</p>
+                <p>Barrancabermeja, Santander, Colombia</p>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

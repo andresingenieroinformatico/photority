@@ -1,17 +1,46 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/navbar_session.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <h1>Bienvenido, {{ request.session.nombre|default:"Usuario" }}</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="{% url 'index' %}" class="nav-link">Inicio</a></li>
+                <li><a href="{% url 'reportar' %}" class="nav-link">Reportar Daño</a></li>
+                <li><a href="{% url 'reportes' %}" class="nav-link">Ver Reportes</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">
+                        <div class="profile-initial">{{ usuario.nombre|slice:":1"|upper }}</div>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'mi_perfil' %}"><i class="fas fa-user"></i> Mi Perfil</a>
+                        <a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="navbar">
-  <ul class="navbar__list">
-    <li class="navbar__item">
-      <a class="navbar__link {% if request.path == '/' %}active{% endif %}" href="{% url 'inicio' %}">Inicio</a>
-    </li>
-    <li class="navbar__item">
-      <a class="navbar__link {% if request.path == '/reportar/' %}active{% endif %}" href="{% url 'reportar' %}">Reportar Daño</a>
-    </li>
-    <li class="navbar__item">
-      <a class="navbar__link {% if request.path == '/reportes/' %}active{% endif %}" href="{% url 'reportes' %}">Mis Reportes</a>
-    </li>
-    </li>
-  </ul>
-</nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('.navbar-menu a');
+            const currentPath = window.location.pathname;
+            links.forEach(link => {
+                const linkPath = link.getAttribute('href');
+                if (linkPath === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

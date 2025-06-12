@@ -1,21 +1,60 @@
 {% extends 'inicio.html' %}
 {% load static %}
 
-{% block title %}Quienes Somos- Photority{% endblock %}
+{% block title %}Quiénes Somos - Fotority{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/quienes_somos.css' %}">
 <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 {% endblock %}
 
 {% block content %}
-    <main class="main-content">
-        <section class="somos">
-                <h2 class="somos-title">¿qué es Fotority?</h2>
-                <p class="somos-text">Photority es una plataforma desarrollada por estudiantes del Instituto Universitario de la Paz (UNIPAZ) para gestionar reportes de daños físicos y tecnológicos en la institución.</p>
-        
-                <h3 class="somos">Nuestra Misión</h3>
-                <p class="somos-text">Facilitar la identificación, reporte y resolución de daños en la infraestructura y equipos tecnológicos de UNIPAZ, promoviendo un entorno eficiente y seguro para la comunidad académica.</p>
-        </section>
-    </main>
+<main class="main-content">
+    <section class="somos-container">
+        <h2 class="somos-title">¿Qué es Fotority?</h2>
+        <p class="somos-text">
+            Fotority es una plataforma desarrollada por estudiantes del Instituto Universitario de la Paz (UNIPAZ) para gestionar reportes de daños físicos y tecnológicos en la institución.
+        </p>
+        <img src="{% static 'images/equipo_unipaz.jpeg' %}" alt="Equipo Fotority" class="somos-imagen">
+
+        <div class="card-grid">
+            <div class="card">
+                <i class="fas fa-bullseye icon-card"></i>
+                <h3>Misión</h3>
+                <p>
+                    Facilitar la identificación, reporte y resolución de daños en la infraestructura y equipos tecnológicos de UNIPAZ, promoviendo un entorno eficiente y seguro.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-eye icon-card"></i>
+                <h3>Visión</h3>
+                <p>
+                    Ser una herramienta esencial para el mantenimiento institucional, reconocida por su facilidad de uso y compromiso con la comunidad académica.
+                </p>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-heart icon-card"></i>
+                <h3>Valores</h3>
+                <ul class="valores-list">
+                    <li>✅ Responsabilidad</li>
+                    <li>✅ Compromiso</li>
+                    <li>✅ Innovación</li>
+                    <li>✅ Transparencia</li>
+                    <li>✅ Trabajo en equipo</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-users icon-card"></i>
+                <h3>Equipo</h3>
+                <p>
+                    Nuestro equipo está conformado por estudiantes apasionados por la tecnología y el servicio a la comunidad. Nuestra meta: generar impacto positivo en UNIPAZ.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
 {% endblock %}

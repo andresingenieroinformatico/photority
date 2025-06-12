@@ -1,99 +1,80 @@
-.about {
-    background-color: #ffffff; 
-    padding: 50px;
-    border-radius: 8px;
+.about-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em;
     text-align: center;
 }
 
 .about-title {
-    color: #003087; /* Deep blue */
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 600;
-    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 1em;
 }
 
 .about-text {
-    color: #1a1a1a; /* Black */
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 2em;
     line-height: 1.6;
 }
 
-.about-section {
-    margin: 5px 0;
+.about-subtitle {
+    font-size: 1.8em;
+    margin: 2em 0 1em;
+    color: #007BFF;
 }
 
-.about-subtitle {
-    color: #003087; 
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-family: 'Arial', sans-serif;
+.mission-card {
+    background-color: #f8f9fa;
+    padding: 2em;
+    margin: 2em auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.388);
+    max-width: 800px;
+}
+
+.icon-mission {
+    font-size: 2em;
+    color: #007BFF;
+    margin-bottom: 0.5em;
 }
 
 .team-grid {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
 }
 
-.team-member {
-    background-color: #f5f5f5; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 2;
-    max-width: 600px;
+.team-member-card {
+    background: #ffffff;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.388);
     text-align: center;
-    margin: auto;
     transition: transform 0.3s ease;
 }
 
-.team-member:hover {
+.team-member-card:hover {
     transform: translateY(-5px);
 }
 
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1em;
+    border: 3px solid #007BFF;
+}
+
 .team-name {
-    color: #1a1a1a;
-    font-size: 1.2rem;
-    margin-bottom: 5 px;
-    font-weight: 600px;
-    font-family: 'Arial', sans-serif;
-    max-width: 200px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
 }
 
 .team-role {
-    color: #0e7212; 
-    font-size: 1rem;
-    font-family: 'Arial', sans-serif;
-}
-
-@media (max-width: 768px) {
-    .about {
-        padding: 20px;
-    }
-
-    .about-title {
-        font-size: 1.8rem;
-    }
-
-    .about-text {
-        font-size: 1rem;
-    }
-
-    .about-subtitle {
-        font-size: 1.3rem;
-    }
-
-    .team-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member {
-        max-width: 100%;
-    }
+    font-size: 1em;
+    color: #30b048;
 }

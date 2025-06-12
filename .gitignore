@@ -1,0 +1,16 @@
+# Ignorar archivos y carpetas de Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyo
+
+# Archivos de entorno virtual
+env/
+
+# archivos multimedia subidos por los usuarios
+*main/media/
+
+#imagenes en las plantillas
+*main/static/images/

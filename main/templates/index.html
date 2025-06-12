@@ -1,11 +1,65 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}Fotority - UNIPAZ{% endblock %}</title>
+    {% block extra_css %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+        <link rel="stylesheet" href="{% static 'css/navbar_session.css' %}">
+        <link rel="stylesheet" href="{% static 'css/footer.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% endblock %}
+
 </head>
+
 <body>
-    <p>este spacio es para el usuario cuando ya haya hecho inicio de sesión</p>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-bg">
+                <img src="{% static 'images/logo.jpg' %}" alt="UNIPAZ" class="logo">
+            </div>
+            <h1 class="site-title">Fotority</h1>
+        </div>
+    </header>
+    {% include 'includes/navbar_sesion.html' %}
+    <main class="main-content">
+        {% block content %}
+            <section class="intro">
+                {% if request.user.is_authenticated %}
+                    <h2 class="intro-title">¡Hola, {{ usuario.nombre }}! 👋</h2>
+                    <p class="intro-text">Bienvenido nuevamente a <strong>Fotority</strong>.</p>
+                {% else %}
+                    <h2 class="intro-title">Bienvenido a Fotority</h2>
+                {% endif %}
+                <p class="intro-text">Facilitamos la gestión de reportes de daños en infraestructura y tecnología dentro del Instituto Universitario de la Paz - UNIPAZ.</p>
+                <p class="intro-text">Seleccione una opción del menú para comenzar.</p>
+                <img src="{% static 'images/index_image.jpg' %}" alt="Bienvenido a Fotority" class="banner-image">
+                <hr>
+                <h3 class="intro-subtitle">¿Qué puedes hacer aquí?</h3>
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-plus-circle fa-3x icon"></i>
+                        <a href="/reportar"><h4>Crear Reporte</h4></a>
+                        <p>Registra un nuevo daño o problema que detectes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-list fa-3x icon"></i>
+                        <a href="/reportes"><h4>Ver Reportes</h4></a>
+                        <p>Consulta el historial de tus reportes enviados.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-user fa-3x icon"></i>
+                        <a href="/mi_perfil"><h4>Mi Perfil</h4></a>
+                        <p>Revisa y edita tus datos personales.</p>
+                    </div>
+                </div>
+            </section>
+        {% endblock %}
+    </main>
+
+{% include 'includes/footer.html' %}
 </body>
 </html>

@@ -1,13 +1,12 @@
 /* Navbar Styling */
 .navbar {
-    background-color: #a0baea;
+    background-color: #003087;
     padding: 20px;
     width: 100%; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar__list {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -17,7 +16,10 @@
 
 .navbar__item {
     font-family: 'Arial', sans-serif;
+    margin-left: 40px;
+    margin-right: 40px;
 }
+
 .navbar__item1 {
     font-family: 'Arial', sans-serif;
     margin-left:200px;
@@ -39,6 +41,12 @@
     color: #1a1a1a; /* Black for contrast */
 }
 
+.navbar__link.active {
+    background-color: #a5d6a7; /* Light green for active link */
+    color: #1a1a1a; /* Black for contrast */
+    font-weight: 600;
+}
+
 .navbar__log {
     color: #ffffff;
     text-decoration: none;
@@ -55,13 +63,13 @@
     color: #1a1a1a; /* Black for contrast */
 }
 
-
-
-.navbar__link.active {
+.navbar__log.active {
     background-color: #a5d6a7; /* Light green for active link */
     color: #1a1a1a; /* Black for contrast */
     font-weight: 600;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

@@ -7,111 +7,131 @@
 
 /* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff; /* Light gray background */
-    color: #1a1a1a;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Subtle off-white for a professional look */
+    color: #1a1a1a; /* Near-black for text */
     line-height: 1.6;
 }
 
 /* Header Styling */
 .header {
-    background-color: #4c85ee;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #003087; /* Deep navy blue for a formal, trustworthy feel */
+    padding: 15px 20px;
 }
 
 .header-content {
-    max-width: 100%;
+    max-width: 1200px; /* Standard max-width for content */
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center logo and title horizontally */
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    text-align: center; /* Ensure text alignment for title/subtitle */
+    gap: 15px; /* Space between logo and title */
 }
 
 .logo-bg {
     background-color: #ffffff; /* White background for logo */
-    padding: 10px;
-    border-radius: 100px;
-    margin-right: 20px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #1a1a1a; /* Subtle black border for contrast */
 }
 
 .logo {
-    max-height: 60px;
+    max-height: 50px; /* Compact for a refined look */
     display: block;
-    border-radius: 10px;
+    border-radius: 6px;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center title and subtitle */
 }
 
 .site-title {
-    color: #ffffff; /* White for title */
-    font-size: 2.5rem;
-    font-weight: 700;
+    color: #ffffff; /* White for high contrast */
+    font-size: 2.2rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .site-subtitle {
-    color: #a5d6a7; /* Light green for subtitle */
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 10px;
-    width: 100%;
+    color: #2e7d32; /* Muted forest green for a professional accent */
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 5px;
 }
 
-/* Main Content Styling */
-.main-content {
-    max-width: 100%;
-    margin: 10px;
-    padding: 50px;
-    display: flex;
-    justify-content: center;                
-    flex-direction: column;     
-    align-items: center;
-    gap: 20px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;  
-}
 
+/* Intro Section */
 .intro {
-    background-color: #ffffff; /* White background for intro section */
+    background-color: #ffffff; /* White background for clean look */
+    max-width: 1200px;
+    margin: 30px auto;
     padding: 30px;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .intro-title {
-    color: #003087; /* Deep blue for section title */
-    font-size: 2rem;
+    color: #003087; /* Deep blue to match header */
+    font-size: 1.8rem;
     margin-bottom: 20px;
     font-weight: 600;
 }
 
 .intro-text {
-    color: #1a1a1a; /* Black for text */
-    font-size: 1.1rem;
+    color: #1a1a1a; /* Black for readability */
+    font-size: 1rem;
     margin-bottom: 15px;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+    }
+
     .header-content {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack logo and title vertically */
+        gap: 10px;
     }
 
     .logo-bg {
-        margin-right: 0;
-        margin-bottom: 15px;
+        margin: 0 auto; /* Center logo */
     }
 
     .site-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .site-subtitle {
         font-size: 1rem;
+    }
+
+    .intro {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 10px;
+    }
+
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    .site-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        max-height: 40px;
     }
 }
