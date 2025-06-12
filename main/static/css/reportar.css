@@ -1,0 +1,198 @@
+/* Reset básico para evitar márgenes automáticos del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5;
+    color: #333;
+}
+
+/* Contenedor principal del formulario */
+.reportar {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+.reportar h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los mensajes de Django */
+.messages {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #007bff;
+    background-color: #e9f1ff;
+    color: #333;
+    border-radius: 4px;
+}
+
+.messages .error {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+}
+
+.messages .success {
+    border-color: #28a745;
+    background-color: #d4edda;
+}
+
+/* Etiquetas de campos */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+    text-align: left;
+}
+
+/* Campos de entrada */
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 1em;
+    background-color: #fff;
+}
+
+/* Asegurar que el textarea no se desborde */
+textarea {
+    min-height: 100px;
+    max-height: 300px;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px;
+    width: 50%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la sección de reportes */
+.informes {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.informes h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.informes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.informes li {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.informes li:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.informes img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.informes a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.informes a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Mensaje cuando no hay reportes */
+.informes .empty {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .reportar, .informes {
+        margin: 20px;
+        padding: 15px;
+        width: calc(100% - 40px);
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    .informes img {
+        max-width: 100%;
+    }
+}
+
+/* Asegurar visibilidad en pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .reportar, .informes {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .informes li {
+        padding: 10px;
+    }
+
+    .informes h2 {
+        font-size: 1.5em;
+    }
+}

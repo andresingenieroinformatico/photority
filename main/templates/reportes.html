@@ -1,32 +1,35 @@
-{% extends 'inicio.html' %} {% load static %} {% block title %}Mis Reportes -
-Photority{% endblock %} {% block content %}
-<section class="mis-reportes">
-    <h2>Mis Reportes</h2>
-    <p>Aquí puedes ver el listado de tus reportes realizados.</p>
+{% extends 'index.html' %}
+{% load static %}
 
-    <table>
-        <thead>
-            <tr>
-                <th>Tipo de Daño</th>
-                <th>Descripción</th>
-                <th>Fecha</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
+{% block title %}Mis Reportes - Photority{% endblock %}
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/reportes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar_session.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">    
+    {% endblock %}
+
+{% block content %}
+<section class="reportes">
+    <h2>Mis Reportes</h2>
+    {% if reportes %}
+        <ul>
             {% for reporte in reportes %}
-            <tr>
-                <td>{{ reporte.tipo_dano }}</td>
-                <td>{{ reporte.descripcion }}</td>
-                <td>{{ reporte.fecha }}</td>
-                <td>{{ reporte.estado }}</td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="5">No tienes reportes registrados.</td>
-            </tr>
+                <li>
+                    <strong>Tipo:</strong> {{ reporte.tipo_dano }} <br>
+                    <strong>Prioridad:</strong> {{ reporte.prioridad }} <br>
+                    <strong>Descripción:</strong> {{ reporte.descripcion }} <br>
+                    {% if reporte.imagen %}
+                <img src="{{ reporte.imagen.url }}" alt="Imagen del reporte" class="reporte-imagen">
+            {% else %}
+                <em>Sin imagen</em>
+            {% endif %}
+                </li>
             {% endfor %}
-        </tbody>
-    </table>
+            
+        </ul>
+    {% else %}
+        <p>No has reportado ningún daño aún.</p>
+    {% endif %}
 </section>
 {% endblock %}

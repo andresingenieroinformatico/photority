@@ -1,19 +1,76 @@
-.somos {
-    background-color: #ffffff; /* White background for intro section */
-    padding: 30px;
-    border-radius: 8px;
+.somos-container {
+    padding: 2em;
+    max-width: 1200px;
+    margin: auto;
     text-align: center;
 }
 
 .somos-title {
-    color: #003087; /* Deep blue for section title */
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 600;
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 1em;
 }
 
 .somos-text {
-    color: #1a1a1a; /* Black for text */
-    font-size: 1.1rem;
-    margin-bottom: 15px;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    color: #444;
+}
+
+.somos-imagen {
+    width: 50%;
+    height: auto; /* Esto es clave */
+    object-fit: contain;
+    border-radius: 12px;
+    margin: 2em 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 12px;
+        box-shadow: 0 10px 12px rgba(0, 0, 0, 0.388);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-card {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 0.5em;
+}
+
+.card h3 {
+    margin-top: 0.5em;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.card p {
+    color: #555;
+    font-size: 1em;
+}
+
+.valores-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+    text-align: left;
+    color: #555;
+}
+
+.valores-list li {
+    margin-bottom: 0.5em;
 }

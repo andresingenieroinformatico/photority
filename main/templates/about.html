@@ -1,40 +1,47 @@
 {% extends 'inicio.html' %}
 {% load static %}
 
-{% block title %}Acerca de - Photority{% endblock %}
+{% block title %}Acerca de - Fotority{% endblock %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 {% endblock %}
 
 {% block content %}
 <main class="main-content">
-
-    <section class="about">
+    <section class="about-section">
         <h2 class="about-title">Nuestro Proyecto</h2>
-        <p class="about-text">Photority es un proyecto desarrollado desde la asignatura de programación basada en componentes con el fin de dar a conocer el framework <a href="https://www.djangoproject.com/">Django</a>  y su utilidad en el desarrollo de plataformas web con el lenguaje de programación <a href="https://www.python.org/">Python</a>.</p>
-        
-        <h3 class="about-subtitle">Nuestra Misión</h3>
-        <p class="about-text">Desarrollar una plataforma web innovadora utilizando el framework Django y el lenguaje de programación Python, con el propósito de demostrar la potencia, flexibilidad y eficiencia de la programación basada en componentes, promoviendo el aprendizaje práctico y la creación de soluciones tecnológicas accesibles, escalables y de alto impacto, bajo la guía del docente Jan Franco Piocuda Cervantes.</p>
+        <p class="about-text">
+            <strong>Fotority</strong> es una plataforma web creada como proyecto académico en la asignatura de <em>Programación Basada en Componentes</em>.
+            Nuestro objetivo fue demostrar el potencial del framework <a href="https://www.djangoproject.com/" target="_blank">Django</a> y el lenguaje <a href="https://www.python.org/" target="_blank">Python</a> en el desarrollo de soluciones prácticas, útiles y escalables.
+        </p>
 
-        <div class="about-section">
-            <h3 class="about-subtitle">Nuestro Equipo</h3>
-            <div class="team-grid">
-                <div class="team-member">
-                    <h4 class="team-name">Jan Franco Piocuda</h4>
-                    <p class="team-role">Director de Proyecto</p>
-                </div>
+        <div class="mission-card">
+            <i class="fas fa-code icon-mission"></i>
+            <h3>Nuestra Misión</h3>
+            <p>
+                Desarrollar una plataforma web innovadora con Django y Python, demostrando su eficiencia en entornos reales, impulsando el aprendizaje práctico y la creación de soluciones tecnológicas accesibles.
+            </p>
+            <small>Docente guía: Jan Franco Piocuda Cervantes</small>
+        </div>
 
-                <div class="team-member">
-                    <h4 class="team-name">Andres Ferney Garcia</h4>
-                    <p class="team-role">Desarrollador Principal</p>
-                </div>
-                
-                <div class="team-member">
-                    <h4 class="team-name">Juan Jose Figueroa</h4>
-                    <p class="team-role">Diseñador y Desarrollador</p>
-                </div>
+        <h3 class="about-subtitle">Equipo de Desarrollo</h3>
+        <div class="team-grid">
+            <div class="team-member-card">
+                <h4 class="team-name">Jan Franco Piocuda</h4>
+                <p class="team-role">Docente y Director de Proyecto</p>
+            </div>
+
+            <div class="team-member-card">
+                <h4 class="team-name">Andres Ferney Garcia</h4>
+                <p class="team-role">Desarrollador Principal</p>
+            </div>
+
+            <div class="team-member-card">
+                <h4 class="team-name">Juan Jose Figueroa</h4>
+                <p class="team-role">Diseñador y Desarrollador</p>
             </div>
         </div>
     </section>

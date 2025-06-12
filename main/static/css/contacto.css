@@ -1,0 +1,60 @@
+.contacto-section {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 2rem;
+    border-radius: 16px;
+}
+
+.contacto-title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-description {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.contacto-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.388);
+    transition: transform 0.3s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-5px);
+}
+
+.contacto-icon {
+    font-size: 2rem;
+    color: #007BFF;
+    margin-bottom: 0.8rem;
+}
+
+.contacto-card h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contacto-card p, .contacto-card a {
+    margin: 0.2rem 0;
+    color: #555;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.contacto-card a:hover {
+    text-decoration: underline;
+}

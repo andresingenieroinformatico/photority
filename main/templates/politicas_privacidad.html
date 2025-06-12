@@ -1,0 +1,55 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block title %}Política de Privacidad - Fotority{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/politicas.css' %}">
+<link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+{% endblock %}
+
+{% block content %}
+<main class="main-content">
+    <section class="politicas-container">
+        <h2 class="politicas-title">Política de Privacidad</h2>
+        <p class="politicas-intro">En Fotority, nos comprometemos a proteger tu privacidad. Esta política describe cómo recopilamos, usamos y protegemos tu información personal.</p>
+
+        <div class="politica-bloque">
+            <h3>1. Información que recopilamos</h3>
+            <p>Recopilamos información como tu nombre, correo institucional, tipo de usuario y reportes registrados dentro de la plataforma. Esta información es esencial para garantizar la trazabilidad y veracidad de los reportes.</p>
+        </div>
+
+        <div class="politica-bloque">
+            <h3>2. Uso de la información</h3>
+            <p>La información se utiliza exclusivamente para mejorar los servicios de mantenimiento institucional, responder a reportes y generar estadísticas internas de UNIPAZ.</p>
+        </div>
+
+        <div class="politica-bloque">
+            <h3>3. Almacenamiento y seguridad</h3>
+            <p>Los datos se almacenan en servidores protegidos mediante protocolos de seguridad. El acceso está restringido únicamente a personal autorizado.</p>
+        </div>
+
+        <div class="politica-bloque">
+            <h3>4. No compartimos tu información</h3>
+            <p>No vendemos ni compartimos tu información personal con terceros. Solo se divulgará si es requerido por ley o por procedimientos internos de la institución.</p>
+        </div>
+
+        <div class="politica-bloque">
+            <h3>5. Derechos del usuario</h3>
+            <p>Como usuario tienes derecho a acceder, modificar o eliminar tu información personal contactando al equipo de soporte. También puedes solicitar la eliminación de tu cuenta.</p>
+        </div>
+
+        <div class="politica-bloque">
+            <h3>6. Cambios en la política</h3>
+            <p>Podemos actualizar esta política ocasionalmente. Te notificaremos sobre cambios relevantes a través de la plataforma.</p>
+        </div>
+
+        <div class="politica-bloque">
+            <h3>7. Contacto</h3>
+            <p>Si tienes preguntas sobre esta política, puedes escribirnos a <a href="mailto:privacidad@fotority.com">privacidad@fotority.com</a> o visitar nuestra <a href="{% url 'contacto' %}">página de contacto</a>.</p>
+        </div>
+
+        <p class="actualizacion">Última actualización: 12 junio de 2025</p>
+    </section>
+</main>
+{% endblock %}

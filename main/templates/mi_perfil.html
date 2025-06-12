@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}Mi Perfil{% endblock %}
+
+{% block header %}
+    <header>
+        {% include 'includes/barra_inicio_sesion.html' %}
+    </header>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/mi_perfil.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar_session.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}"> 
+{% endblock %}
+
+{% block content %}
+    <div class="profile-container">
+        <h2>Mi Perfil</h2>
+        <i class="fas fa-user profile-icon"></i>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="flash-message {{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <div class="profile-item">
+            <i class="fas fa-user icon"></i>
+            <span>Nombre:</span> {{ usuario.nombre }}
+        </div>
+
+        <div class="profile-item">
+            <i class="fas fa-user icon"></i>
+            <span>Apellido:</span> {{ usuario.apellido }}
+        </div>
+
+        <div class="profile-item">
+            <i class="fas fa-user icon"></i>
+            <span>Cedula:</span> {{ usuario.cedula }}
+        </div>
+
+        <div class="profile-item">
+            <i class="fas fa-envelope icon"></i>
+            <span>Correo:</span> {{ usuario.correo }}   
+        </div>
+
+        <div class="profile-item">
+            <i class="fas fa-users icon"></i>
+            <span>Tipo de Usuario:</span> {{ usuario.tipo_user }}
+        </div>
+        <a href="{% url 'index' %}" class="btn-back">Volver a Inicio</a>
+    </div>
+{% endblock %}

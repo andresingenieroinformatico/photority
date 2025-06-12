@@ -1,0 +1,54 @@
+.politicas-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.politicas-title {
+    font-size: 2.2rem;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.politicas-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.politica-bloque {
+    margin-bottom: 1.5rem;
+}
+
+.politica-bloque h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.politica-bloque p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.politica-bloque a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.politica-bloque a:hover {
+    text-decoration: underline;
+}
+
+.actualizacion {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #888;
+    margin-top: 2rem;
+}

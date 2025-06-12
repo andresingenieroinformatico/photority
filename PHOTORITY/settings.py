@@ -1,9 +1,9 @@
 import os 
 from pathlib import Path
+from django.contrib import admin
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -13,6 +13,10 @@ SECRET_KEY = 'django-insecure--h*lqscqzf+y28c&9!=8d0v93otn(5#v^3^t%pn+^mp_c9b(e_
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 INSTALLED_APPS = [
     'main.apps.MainConfig',

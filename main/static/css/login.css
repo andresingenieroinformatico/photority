@@ -47,16 +47,14 @@
     padding: 20px;
     background: #ffffff;
     border: 3px solid transparent;
-    border-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.2)) 1;
-    border-radius: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
 }
 
 /* Form Styling */
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     width: 100%;
     text-align: center;
     align-items: center;
@@ -67,12 +65,12 @@
     color: #003087;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 /* Social Container */
 .social-container {
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 .social-container a {
@@ -95,45 +93,74 @@
 #red {
     color: red;
 }
+/* Íconos genéricos para campos de entrada */
 
-/* Form Inputs */
 .form-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.form-group input {
+.form-group .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #3f2973;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.form-group input,
+.form-group select {
     background: #eee;
-    border: none;
+    border: 1px solid transparent;
     padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
+    margin: 0px 0;
+    width: 300px;
     font-size: 1rem;
     border-radius: 5px;
-    color: #1a1a1a;
-    width: 320px;
+    color: #000000;
 }
 
-.form-group input:focus {
-    outline: none;
-    border: 1px solid #4c85ee;
-    box-shadow: 0 0 5px rgba(0, 48, 135, 0.3);
+.form-group input,
+.form-group select {
+    padding-left: 35px; /* espacio para el ícono */
+}
+.form-group .fa-eye,
+.form-group .fa-eye-slash {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3f2973;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-/* Error Message */
-.error-message {
-    color: #d32f2f;
-    font-size: 0.9rem;
+.form-group .fa-eye:hover,
+.form-group .fa-eye-slash:hover {
+    color: #007bff;
+}
+.alert {
+    width: 70%;
+    padding: 10px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
+.alert.error {
+    background-color: #f8d7da;
+    color: #560109;
+}
 /* Forgot Password Link */
 .forgot-password {
     color: #228be6;
     font-size: 14px;
     text-decoration: none;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .forgot-password:hover {
@@ -149,6 +176,7 @@
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
+    margin-top: 0px;
     letter-spacing: 1px;
     text-transform: uppercase;
     width: 50%;

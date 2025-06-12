@@ -1,0 +1,82 @@
+/* Contenedor general */
+.reportes {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título */
+.reportes h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Grid de 3 columnas */
+.reportes ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Tarjeta de reporte */
+.reportes li {
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.reportes li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto del reporte */
+.reportes strong {
+    display: block;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Imagen del reporte */
+.reportes img {
+    margin-top: 12px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Texto si no hay imagen */
+.reportes em {
+    color: #d72a2a;
+    font-style: italic;
+}
+
+/* Botón editar */
+.editar-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.editar-btn:hover {
+    background-color: #0056b3;
+}

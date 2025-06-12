@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block title %}Editar Reporte{% endblock %}
+
+{% block content %}
+<section class="reportar">
+    <h2>Editar Reporte</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="tipo_dano">Tipo de Daño:</label>
+        <input type="text" name="tipo_dano" value="{{ reporte.tipo_dano }}" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" required>{{ reporte.descripcion }}</textarea>
+
+        <label for="prioridad">Prioridad:</label>
+        <select name="prioridad" required>
+            <option value="Baja" {% if reporte.prioridad == "Baja" %}selected{% endif %}>Baja</option>
+            <option value="Media" {% if reporte.prioridad == "Media" %}selected{% endif %}>Media</option>
+            <option value="Alta" {% if reporte.prioridad == "Alta" %}selected{% endif %}>Alta</option>
+        </select>
+
+        {% if reporte.imagen %}
+            <p>Imagen actual:</p>
+            <img src="{{ reporte.imagen.url }}" style="max-width: 300px;">
+        {% endif %}
+        <label for="imagen">Nueva imagen (opcional):</label>
+        <input type="file" name="imagen">
+
+        <button type="submit">Guardar Cambios</button>
+    </form>
+</section>
+{% endblock %}

@@ -1,25 +1,53 @@
-{% extends 'inicio.html' %}
+{% extends 'index.html' %}
 {% load static %}
 
 {% block title %}Reportar Daño - Photority{% endblock %}
-
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/reportar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar_session.css' %}">
+    <link rel="stylesheet" href="{% static 'css/inicio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">    
+    {% endblock %}
 {% block content %}
-<section class="reportar">
-    <h2>Reportar Daño</h2>
-    <form action="" method="post">
+<body>
+    <section class="reportar">
+        <h2>Reportar Daño</h2>
+    
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <form  action="/reportar/" method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <!-- Aquí agregas los campos del formulario -->
+
         <label for="tipo_dano">Tipo de Daño:</label>
         <select id="tipo_dano" name="tipo_dano" required>
             <option value="">Seleccione...</option>
-            <option value="fisico">Físico</option>
-            <option value="tecnologico">Tecnológico</option>
+            <option value="Físico">Físico</option>
+            <option value="Tecnológico">Tecnológico</option>
         </select>
 
-        <label for="descripcion">Descripción:</label>
+        <label for="descripcion">Descripción del daño:</label>
         <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
 
+        <label for="prioridad">Prioridad:</label>
+        <select id="prioridad" name="prioridad" required>
+            <option value="">Seleccione...</option>
+            <option value="Alta">Alta</option>
+            <option value="Media">Media</option>
+            <option value="Baja">Baja</option>
+        </select>
+
+        <label for="imagen">Foto del incidente:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*">
+
         <button type="submit">Enviar Reporte</button>
-    </form>
-</section>
+        </form>
+
+    </section>
+</body>
 {% endblock %}
