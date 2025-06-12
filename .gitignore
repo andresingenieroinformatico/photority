@@ -22,3 +22,6 @@ Thumbs.db
 
 # archivos multimedia subidos por los usuarios
 main/media/
+
+#imagenes en las plantillas
+main/static/images/
