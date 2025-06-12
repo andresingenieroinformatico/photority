@@ -20,4 +20,4 @@ Thumbs.db
 # Archivos de log
 *.log
 #  aimagenes de reportes    
-media/reportes/*
+media/ 
